@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="JSP_Day_5_Home_Ex:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>JSP_Day_5_Home_Ex</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="JSP_Day_5_Home_Ex-1.war">
+      <element id="artifact" artifact-name="JSP_Day_5_Home_Ex:war exploded" />
+    </root>
+  </artifact>
+</component>

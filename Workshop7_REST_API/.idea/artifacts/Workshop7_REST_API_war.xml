@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Workshop7_REST_API:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Workshop7_REST_API</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Workshop7_REST_API-1.war">
+      <element id="artifact" artifact-name="Workshop7_REST_API:war exploded" />
+    </root>
+  </artifact>
+</component>
