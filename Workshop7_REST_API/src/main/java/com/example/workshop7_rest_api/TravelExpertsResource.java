@@ -186,6 +186,35 @@ public class TravelExpertsResource {
         return response; // message for a user about the insert status is returned
     }
 
+    // Delete a Package with an packageId specified in the URL using a POST method
+        // (i.e. it can be used from a Web Application):
+    @Path("/deletepackage/{PackageId}") // URL(POST): http://localhost:8080/api/deletepackage/11
+    @POST // Accessible by DELETE Method
+    @Produces(MediaType.APPLICATION_JSON) // simple feedback message for a user comes back in JSON format
+    public String deletePackageByPostMethod(@PathParam("PackageId") int packageId)
+    {
+        String response = ""; // introducing and initiating the variable to be returned
+        // referencing a persistence unit of the persistence.xml file:
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("packages");
+        EntityManager em = emf.createEntityManager(); // introducing EntityManager instance - opening DB connection
+        Package myPackage = em.find(Package.class, packageId); // finding the Package to be deleted in the DB
+        em.getTransaction().begin(); // opening a transaction
+        em.remove(myPackage); // deleting the Package
+        if(!em.contains(myPackage))
+        { // delete attempts was successful
+            em.getTransaction().commit(); // saving changes in the DB
+            em.close(); // mission accomplished - connection closed
+            response = "{'message', 'Package was deleted successfully'}"; // preparing good news message
+        }
+        else
+        {
+            em.getTransaction().rollback(); // transaction rollback - no need to save faulty changes
+            em.close(); // connection is closed even though the delete failed
+            response = "{'message', 'Failed to delete package'}"; // preparing bad news message
+        }
+        return response; // message for a user about the insert status is returned
+    }
+
     // Get a list of all Agents as JSON/GSON objects:
     @Path("agents") // URL: http://localhost:8080/api/agents
     @GET // Accessible by GET Method
