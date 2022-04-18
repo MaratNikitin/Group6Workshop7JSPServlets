@@ -9,11 +9,15 @@ This is the class where main logic of REST API is defined
 
 package com.example.workshop7_rest_api;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import model.Agent;
 import model.Package;
 import model.Product;
+import org.json.simple.JSONArray;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -22,7 +26,10 @@ import javax.persistence.Query;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Path("/")
 public class TravelExpertsResource {
@@ -63,16 +70,15 @@ public class TravelExpertsResource {
     @Path("/getproducts/{PackageId}") // URL (GET): http://localhost:8080/api/getproducts/1
     @GET // Accessible by GET Method
     @Produces(MediaType.APPLICATION_JSON) // JSON/GSON objects are returned here
-    public String getProductsOfPackage(@PathParam("PackageId") int packageId) {
+    public String getProductsOfPackage(@PathParam("PackageId") int packageId) throws JsonProcessingException {
         String response = ""; // introducing and initiating the variable to be returned
-        // referencing a persistence unit from the persistence.xml file:
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("products");
         EntityManager em = emf.createEntityManager(); // introducing EntityManager instance - opening DB connection
         // creating a list of Products belonging to the selected package is created using a good old raw SQL:
         List<Product> productList = em.createNativeQuery("SELECT products.ProductId, products.ProdName " +
                 "FROM products JOIN products_suppliers ON products.ProductId = products_suppliers.ProductId " +
                 "JOIN packages_products_suppliers ON products_suppliers.ProductSupplierId = packages_products_suppliers.ProductSupplierId " +
-                "WHERE packages_products_suppliers.PackageId="+packageId).getResultList();
+                "WHERE packages_products_suppliers.PackageId="+packageId, Product.class).getResultList();
         Type type = new TypeToken<List<Product>>(){}.getType(); // setting a Type of JSON objects
         Gson gson = new Gson(); // introducing JSON/GSON object
         response = gson.toJson(productList, type); // saving JSON/GSON list to be returned
