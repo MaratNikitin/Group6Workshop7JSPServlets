@@ -20,7 +20,7 @@ public class Package {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "PackageId", nullable = false)
-    private Integer id;
+    private Integer packageId;
 
     @Column(name = "PkgName", nullable = false, length = 50)
     private String pkgName;
@@ -41,11 +41,11 @@ public class Package {
     private BigDecimal pkgAgencyCommission;
 
     public Integer getId() {
-        return id;
+        return packageId;
     }
 
     public void setId(Integer id) {
-        this.id = id;
+        this.packageId = id;
     }
 
     public String getPkgName() {
