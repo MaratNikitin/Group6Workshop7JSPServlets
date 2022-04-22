@@ -173,7 +173,7 @@ public class AddActivity extends AppCompatActivity {
             JSONObject obj = new JSONObject();
             // filling up the empty JSON object with data:
             try {
-                obj.put("id", pkg.getId() + "");
+                obj.put("packageId", pkg.getId() + "");
                 obj.put("pkgName", pkg.getPkgName() + "");
                 obj.put("pkgStartDate", pkg.getPkgStartDate() + "");
                 obj.put("pkgEndDate", pkg.getPkgEndDate() + "");

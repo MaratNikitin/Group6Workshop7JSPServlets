@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
                         {
                             JSONObject pkg = jsonArray.getJSONObject(i); // retrieving a single package
                             // instead of a larger Package instances, lighter ListViewPackage instances are retrieved:
-                            ListViewPackage myPackage = new ListViewPackage(pkg.getInt("id"),
+                            ListViewPackage myPackage = new ListViewPackage(pkg.getInt("packageId"),
                                     pkg.getString("pkgName"));
                             adapter.add(myPackage); // adding a package to the ListView
                         }

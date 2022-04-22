@@ -237,7 +237,7 @@ public class DetailActivity extends AppCompatActivity {
                         public void run() {
                             try {
                                 // populating text fields by data of the selected package
-                                etPackageID.setText(finalPkg.getInt("id") + "");
+                                etPackageID.setText(finalPkg.getInt("packageId") + "");
                                 etPkgName.setText(finalPkg.getString("pkgName"));
                                 etStartDate.setText(finalPkg.getString("pkgStartDate").substring(0,10));
                                 etEndDate.setText(finalPkg.getString("pkgEndDate").substring(0,10));
@@ -277,7 +277,7 @@ public class DetailActivity extends AppCompatActivity {
             String url = "http://192.168.1.68:8080/api/updatepackage";
             JSONObject obj = new JSONObject();
             try {
-                obj.put("id", pkg.getId() + "");
+                obj.put("packageId", pkg.getId() + "");
                 obj.put("pkgName", pkg.getPkgName() + "");
                 obj.put("pkgStartDate", pkg.getPkgStartDate() + "");
                 obj.put("pkgEndDate", pkg.getPkgEndDate() + "");
