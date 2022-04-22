@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/antiqueWhite">
+
+    <EditText
+        android:id="@+id/etEndDate"
+        android:layout_width="253dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="YYYY-MM-DD"
+        android:inputType="textPersonName"
+        android:textColor="@color/maroon"
+        android:textColorHint="@android:color/darker_gray"
+        android:textCursorDrawable="@color/maroon"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.454" />
+
+    <EditText
+        android:id="@+id/etPkgName"
+        android:layout_width="253dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Required"
+        android:inputType="textPersonName"
+        android:textColor="@color/maroon"
+        android:textColorHint="@android:color/darker_gray"
+        android:textCursorDrawable="@color/maroon"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.322" />
+
+    <EditText
+        android:id="@+id/etPackageID"
+        android:layout_width="253dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="textPersonName"
+        android:textColor="@color/maroon"
+        android:textColorHint="@android:color/darker_gray"
+        android:textCursorDrawable="@color/maroon"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.256" />
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="253dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Required"
+        android:inputType="textPersonName"
+        android:textColor="@color/maroon"
+        android:textColorHint="@android:color/darker_gray"
+        android:textCursorDrawable="@color/maroon"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.519" />
+
+    <EditText
+        android:id="@+id/etCommission"
+        android:layout_width="253dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Required"
+        android:inputType="textPersonName"
+        android:textColor="@color/maroon"
+        android:textColorHint="@android:color/darker_gray"
+        android:textCursorDrawable="@color/maroon"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.651" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="146dp"
+        android:layout_height="340dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.473">
+
+        <TextView
+            android:id="@+id/lblPackageID2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="20dp"
+            android:text="Package ID:"
+            android:textColor="@color/maroon"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblPkgName2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="20dp"
+            android:text="Pkg Name:"
+            android:textColor="@color/maroon"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblPkgStartDate2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="20dp"
+            android:text="Start Date:"
+            android:textColor="@color/maroon"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblPkgEndDate2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="20dp"
+            android:text="End Date:"
+            android:textColor="@color/maroon"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblDescription2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="20dp"
+            android:text="Description:"
+            android:textColor="@color/maroon"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblBasePrice2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="20dp"
+            android:text="Base Price:"
+            android:textColor="@color/maroon"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblCommission2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="20dp"
+            android:text="Commission:"
+            android:textColor="@color/maroon"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etBasePrice"
+        android:layout_width="253dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Required"
+        android:inputType="textPersonName"
+        android:textColor="@color/maroon"
+        android:textColorHint="@android:color/darker_gray"
+        android:textCursorDrawable="@color/maroon"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.585" />
+
+    <TextView
+        android:id="@+id/tvEditDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Details of the selected \npackage (edit or delete):"
+        android:textAlignment="center"
+        android:textColor="@color/maroon"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etStartDate"
+        android:layout_width="253dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="YYYY-MM-DD"
+        android:inputType="textPersonName"
+        android:textColor="@color/maroon"
+        android:textColorHint="@android:color/darker_gray"
+        android:textCursorDrawable="@color/maroon"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.388" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="91dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/peru"
+        android:text="Back"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.562" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="91dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/peru"
+        android:text="Update"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.562" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="91dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/peru"
+        android:text="Delete"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.562" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/antiqueWhite">
+
+    <TextView
+        android:id="@+id/tvAbout2"
+        android:layout_width="363dp"
+        android:layout_height="435dp"
+        android:lineSpacingExtra="20sp"
+        android:text="Authors: Marat Nikitin, Rebecca Allan, Hugo Schrupp Suarez, Arvin San Juan; \nSAIT, OOSD program, \nPROJ 207 - Threaded Project course;\nThis app allows viewing, adding, updating and deleting travel packages' data coming from a database through REST API; \nAndroid version: 8.0 (Oreo); \nMay 2022."
+        android:textColor="@color/maroon"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
+
+    <Button
+        android:id="@+id/btnBackAbout"
+        android:layout_width="91dp"
+        android:layout_height="49dp"
+        android:background="@color/peru"
+        android:text="Back"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAbout2"
+        app:layout_constraintVertical_bias="0.476" />
+
+    <TextView
+        android:id="@+id/textViewAboutTheApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About the app:"
+        android:textAlignment="center"
+        android:textColor="@color/maroon"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.103" />
+</androidx.constraintlayout.widget.ConstraintLayout>
