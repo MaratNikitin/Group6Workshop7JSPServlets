@@ -73,8 +73,8 @@ public class AddActivity extends AppCompatActivity {
         // initializing validation style:
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
 
-        // Setting RegEx for validating 'YYYY-MM-DD' dates' format:
-        String dateFormatRegEx = "\\d{4}-\\d{2}-\\d{2}";
+        // Setting advanced RegEx for validating 'YYYY-MM-DD' dates' format and ensuring valid dates:
+        String dateFormatRegEx = "^((?:(?:1[6-9]|2[0-9])\\d{2})(-)(?:(?:(?:0[13578]|1[02])(-)31)|((0[1,3-9]|1[0-2])(-)(29|30))))$|^(?:(?:(?:(?:1[6-9]|[2-9]\\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00)))(-)02(-)29)$|^(?:(?:1[6-9]|2[0-9])\\d{2})(-)(?:(?:0[1-9])|(?:1[0-2]))(-)(?:0[1-9]|1\\d|2[0-8])$";
 
         // adding validation for EditText fields:
         awesomeValidation.addValidation(this, R.id.etPkgName2,

@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Group 6 Android</string>
     <string name="pkgName2">Package Name is required</string>
-    <string name="pkgStartDate2">Start Date should be in \'YYYY-MM-DD\' format</string>
-    <string name="pkgEndDate2">End Date should be in \'YYYY-MM-DD\' format</string>
+    <string name="pkgStartDate2">Start Date should be a valid date in \'YYYY-MM-DD\' format</string>
+    <string name="pkgEndDate2">End Date should be a valid date in \'YYYY-MM-DD\' format</string>
     <string name="pkgDescription2">Description is required</string>
     <string name="pkgBasePrice2">Base Price is required</string>
     <string name="pkgCommission2">Commission value is required</string>
