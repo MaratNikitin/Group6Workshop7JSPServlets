@@ -10,7 +10,9 @@
         android:id="@+id/etEndDate"
         android:layout_width="253dp"
         android:layout_height="45dp"
+
         android:layout_marginEnd="8dp"
+
         android:ems="10"
         android:hint="YYYY-MM-DD"
         android:inputType="textPersonName"
@@ -18,14 +20,17 @@
         android:textColorHint="@android:color/darker_gray"
         android:textCursorDrawable="@color/maroon"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etStartDate" />
+
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toStartOf="parent"
+
 
     <EditText
         android:id="@+id/etPkgName"
         android:layout_width="253dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
         android:ems="10"
         android:hint="Required"
         android:inputType="textPersonName"
@@ -33,17 +38,20 @@
         android:textColorHint="@android:color/darker_gray"
         android:textCursorDrawable="@color/maroon"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.301" />
+
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="0.943"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/etPackageID" />
+
 
     <EditText
         android:id="@+id/etPackageID"
         android:layout_width="253dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="4dp"
+
+        android:layout_marginTop="4dp"
+
         android:ems="10"
         android:focusable="false"
         android:focusableInTouchMode="false"
@@ -52,15 +60,19 @@
         android:textColorHint="@android:color/darker_gray"
         android:textCursorDrawable="@color/maroon"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/etPkgName"
-        app:layout_constraintEnd_toEndOf="parent" />
+
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
 
     <EditText
         android:id="@+id/etCommission"
         android:layout_width="253dp"
         android:layout_height="45dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="48dp"
         android:ems="10"
         android:hint="Required"
         android:inputType="textPersonName"
@@ -68,21 +80,26 @@
         android:textColorHint="@android:color/darker_gray"
         android:textCursorDrawable="@color/maroon"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.705" />
+
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/etBasePrice"
+        app:layout_constraintVertical_bias="0.0" />
+
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="145dp"
-        android:layout_height="387dp"
+        android:layout_width="144dp"
+        android:layout_height="349dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.015"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        app:layout_constraintVertical_bias="0.013">
 
         <TextView
             android:id="@+id/lblPackageID2"
@@ -142,7 +159,9 @@
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="40dp" />
+
+            android:layout_height="wrap_content" />
+
 
         <TextView
             android:id="@+id/lblBasePrice2"
@@ -170,9 +189,11 @@
 
     <EditText
         android:id="@+id/etBasePrice"
-        android:layout_width="253dp"
-        android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
+
+        android:layout_width="252dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="4dp"
+
         android:ems="10"
         android:hint="Required"
         android:inputType="textPersonName"
@@ -180,28 +201,32 @@
         android:textColorHint="@android:color/darker_gray"
         android:textCursorDrawable="@color/maroon"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/etCommission"
-        app:layout_constraintEnd_toEndOf="parent" />
+
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDescription" />
+
 
     <TextView
         android:id="@+id/tvEditDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
         android:text="Details of the selected \npackage (edit or delete):"
         android:textAlignment="center"
         android:textColor="@color/maroon"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <EditText
         android:id="@+id/etStartDate"
         android:layout_width="253dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
+
         android:ems="10"
         android:hint="YYYY-MM-DD"
         android:inputType="textPersonName"
@@ -209,70 +234,141 @@
         android:textColorHint="@android:color/darker_gray"
         android:textCursorDrawable="@color/maroon"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="0.943"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+
         app:layout_constraintTop_toBottomOf="@+id/etPkgName" />
 
     <Button
         android:id="@+id/btnBack"
         android:layout_width="91dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="4dp"
         android:background="@color/peru"
         android:text="Back"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.562" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="@+id/guideline5"
+        app:layout_constraintVertical_bias="0.484" />
 
     <Button
         android:id="@+id/btnSave"
         android:layout_width="91dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="4dp"
         android:background="@color/peru"
         android:text="Update"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.562" />
+        app:layout_constraintTop_toTopOf="@+id/guideline5"
+        app:layout_constraintVertical_bias="0.484" />
 
     <Button
         android:id="@+id/btnDelete"
         android:layout_width="91dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="4dp"
         android:background="@color/peru"
         android:text="Delete"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.875"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.562" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="@+id/guideline5"
+        app:layout_constraintVertical_bias="0.484" />
 
     <EditText
         android:id="@+id/etDescription"
-        android:layout_width="256dp"
-        android:layout_height="73dp"
+
+        android:layout_width="257dp"
+        android:layout_height="63dp"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
+
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
         android:textColor="@color/maroon"
-        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toBottomOf="@+id/etEndDate" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.215"
+        app:layout_constraintGuide_begin="20dp" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
