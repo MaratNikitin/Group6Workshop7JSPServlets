@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/antiqueWhite">
@@ -59,24 +60,6 @@
         app:layout_constraintVertical_bias="0.256" />
 
     <EditText
-        android:id="@+id/etDescription"
-        android:layout_width="253dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Required"
-        android:inputType="textPersonName"
-        android:textColor="@color/maroon"
-        android:textColorHint="@android:color/darker_gray"
-        android:textCursorDrawable="@color/maroon"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.519" />
-
-    <EditText
         android:id="@+id/etCommission"
         android:layout_width="253dp"
         android:layout_height="45dp"
@@ -92,19 +75,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.651" />
+        app:layout_constraintVertical_bias="0.702" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="146dp"
-        android:layout_height="340dp"
+        android:layout_width="145dp"
+        android:layout_height="387dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.015"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.473">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/lblPackageID2"
@@ -162,6 +144,11 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="49dp" />
+
+        <TextView
             android:id="@+id/lblBasePrice2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -201,7 +188,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.585" />
+        app:layout_constraintVertical_bias="0.638" />
 
     <TextView
         android:id="@+id/tvEditDelete"
@@ -284,5 +271,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:layout_constraintVertical_bias="0.562" />
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="256dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="5dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:textColor="@color/maroon"
+        app:layout_constraintBottom_toTopOf="@+id/etBasePrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEndDate"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

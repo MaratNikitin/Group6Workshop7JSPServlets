@@ -167,7 +167,8 @@ public class AddActivity extends AppCompatActivity {
             //send JSON data to REST service
 
             // comment-out the line(s) with not your IP(s) and insert a line with your IP instead:
-            String url = "http://192.168.1.68:8080/api/addpackage"; // Marat's IP
+            //String url = "http://192.168.1.68:8080/api/addpackage"; // Marat's IP
+            String url = "http://192.168.1.83:8080/api/addpackage"; // Becca's IP
 
             // creating an empty JSON object:
             JSONObject obj = new JSONObject();

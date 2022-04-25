@@ -215,7 +215,8 @@ public class DetailActivity extends AppCompatActivity {
             StringBuffer buffer = new StringBuffer();
 
             // comment-out the line(s) with not your IP(s) and insert a line with your IP instead:
-            String url = "http://192.168.1.68:8080/api/getpackage/" + id; // Marat's IP
+            //String url = "http://192.168.1.68:8080/api/getpackage/" + id; // Marat's IP
+            String url = "http://192.168.1.83:8080/api/getpackage/" + id; // Becca's IP
             // creating a request:
             StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
                 @Override
@@ -274,7 +275,8 @@ public class DetailActivity extends AppCompatActivity {
             //sending JSON data to REST service
 
             // comment-out the line(s) with not your IP(s) and insert a line with your IP instead:
-            String url = "http://192.168.1.68:8080/api/updatepackage";
+            //String url = "http://192.168.1.68:8080/api/updatepackage";
+            String url = "http://192.168.1.83:8080/api/updatepackage"; // Becca
             JSONObject obj = new JSONObject();
             try {
                 obj.put("packageId", pkg.getId() + "");
@@ -331,7 +333,8 @@ public class DetailActivity extends AppCompatActivity {
             //retrieving JSON data from REST service into StringBuffer
 
             // comment-out the line(s) with not your IP(s) and insert a line with your IP instead:
-            String url = "http://192.168.1.68:8080/api/deletepackage/" + id;
+            //String url = "http://192.168.1.68:8080/api/deletepackage/" + id;
+            String url = "http://192.168.1.83:8080/api/deletepackage/" + id; // Becca
 
             // creating a request:
             StringRequest stringRequest = new StringRequest(Request.Method.DELETE, url, new Response.Listener<String>() {
