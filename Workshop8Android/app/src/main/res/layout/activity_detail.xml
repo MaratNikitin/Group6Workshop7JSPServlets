@@ -6,25 +6,26 @@
     android:layout_height="match_parent"
     android:background="@color/antiqueWhite">
 
+
     <EditText
         android:id="@+id/etEndDate"
         android:layout_width="253dp"
         android:layout_height="45dp"
 
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
-
         android:ems="10"
         android:hint="YYYY-MM-DD"
         android:inputType="textPersonName"
         android:textColor="@color/maroon"
         android:textColorHint="@android:color/darker_gray"
+
         android:textCursorDrawable="@color/maroon"
         android:textSize="18sp"
-
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintHorizontal_bias="0.96"
         app:layout_constraintStart_toStartOf="parent"
-
+        app:layout_constraintTop_toBottomOf="@+id/etStartDate" />
 
     <EditText
         android:id="@+id/etPkgName"
@@ -40,18 +41,16 @@
         android:textSize="18sp"
 
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="0.943"
+        app:layout_constraintHorizontal_bias="0.911"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toBottomOf="@+id/etPackageID" />
-
 
     <EditText
         android:id="@+id/etPackageID"
         android:layout_width="253dp"
         android:layout_height="45dp"
 
-        android:layout_marginTop="4dp"
-
+        android:layout_marginBottom="5dp"
         android:ems="10"
         android:focusable="false"
         android:focusableInTouchMode="false"
@@ -59,13 +58,13 @@
         android:textColor="@color/maroon"
         android:textColorHint="@android:color/darker_gray"
         android:textCursorDrawable="@color/maroon"
-        android:textSize="18sp"
 
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/etPkgName"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintHorizontal_bias="0.911"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
-
 
     <EditText
         android:id="@+id/etCommission"
@@ -79,15 +78,14 @@
         android:textColor="@color/maroon"
         android:textColorHint="@android:color/darker_gray"
         android:textCursorDrawable="@color/maroon"
-        android:textSize="18sp"
 
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintHorizontal_bias="0.911"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toBottomOf="@+id/etBasePrice"
         app:layout_constraintVertical_bias="0.0" />
-
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -187,6 +185,7 @@
 
     </LinearLayout>
 
+
     <EditText
         android:id="@+id/etBasePrice"
 
@@ -203,10 +202,9 @@
         android:textSize="18sp"
 
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintHorizontal_bias="0.905"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etDescription" />
-
 
     <TextView
         android:id="@+id/tvEditDelete"
@@ -235,11 +233,13 @@
         android:textCursorDrawable="@color/maroon"
         android:textSize="18sp"
 
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="0.943"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintHorizontal_bias="0.911"
 
-        app:layout_constraintTop_toBottomOf="@+id/etPkgName" />
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/etPkgName"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnBack"
@@ -293,7 +293,7 @@
 
         android:layout_width="257dp"
         android:layout_height="63dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="1dp"
 
         android:ems="10"
         android:gravity="start|top"
@@ -301,7 +301,7 @@
         android:textColor="@color/maroon"
 
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintHorizontal_bias="0.935"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toBottomOf="@+id/etEndDate" />
 
@@ -327,7 +327,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp"
-        app:layout_constraintGuide_percent="0.20" />
+        app:layout_constraintGuide_percent="0.17" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
@@ -366,8 +366,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.215"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintGuide_end="574dp" />
 
 
 
