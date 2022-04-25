@@ -23,7 +23,7 @@ This is the class to get packages to view
         async function fetchPackages()
         {
             //url for packages from REST app
-            var url = "http://localhost:8080/Workshop7_REST_API_war_exploded/api/packages";
+            var url = "http://localhost:8080/api/packages";
             var packages = await fetch(url);
             var packagesJSON = await packages.json();
             //loop adding each package to the option list
@@ -37,7 +37,7 @@ This is the class to get packages to view
         //function to get a specific package from db based off of its ID
         async function fetchPackage(id) {
             //url for get packages from REST app
-            var url = "http://localhost:8080/Workshop7_REST_API_war_exploded/api/getpackage/" + id;
+            var url = "http://localhost:8080/api/getpackage/" + id;
             var response = await fetch(url);
             //if unable to fetch package error occurs
             if (!response.ok)
@@ -67,7 +67,7 @@ This is the class to get packages to view
         //function to get the products associated with the chosen package
         async function fetchProducts(id) {
             //url for get products from REST app
-            var url = "http://localhost:8080/Workshop7_REST_API_war_exploded/api/getproducts/" + id;
+            var url = "http://localhost:8080/api/getproducts/" + id;
             var response = await fetch(url);
             //if unable to fetch products error occurs
             if (!response.ok)
@@ -95,8 +95,20 @@ This is the class to get packages to view
             }
             //adds html to table body
             $("#productsTable>tbody").html(tableData);
-            //adds html to table head
-            $("#productsTable>thead").html(tableHead);
+
+            // changes table header depending on if there are products for that package
+            if($("#productsTable>tbody").html() == "")
+            {
+                $("#productsTable>thead").html('<tr>' +
+                    '<th>No Products Available for Selected Package</th>' +
+                    '</tr>');
+            }
+            else
+            {
+                //adds html to table head
+                $("#productsTable>thead").html(tableHead);
+            }
+
 
         }
 
