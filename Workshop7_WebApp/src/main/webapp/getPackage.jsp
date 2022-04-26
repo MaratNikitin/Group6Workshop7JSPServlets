@@ -16,6 +16,14 @@ This is the class to get packages to view
 <head>
     <meta charset="UTF-8">
     <title>Package display</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="stylesheet.css" rel="stylesheet" />
     <script   src="https://code.jquery.com/jquery-3.6.0.js"   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="   crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.1/dayjs.min.js"></script>
     <script>
@@ -95,29 +103,18 @@ This is the class to get packages to view
             }
             //adds html to table body
             $("#productsTable>tbody").html(tableData);
-
-            // changes table header depending on if there are products for that package
-            if($("#productsTable>tbody").html() == "")
-            {
-                $("#productsTable>thead").html('<tr>' +
-                    '<th>No Products Available for Selected Package</th>' +
-                    '</tr>');
-            }
-            else
-            {
-                //adds html to table head
-                $("#productsTable>thead").html(tableHead);
-            }
-
+            //adds html to table head
+            $("#productsTable>thead").html(tableHead);
 
         }
 
     </script>
 </head>
 <body>
+<h1>Select your package:</h1>
 <%--package selection option, Initiates fetchPackage and fetchProducts when selection is made--%>
 <select id="packageselect" onchange="fetchPackage(this.value), fetchProducts(this.value)">
-    <option value="">Select a package to view details</option>
+    <option class="dropdown-menu" value="">Select a package to view details</option>
 </select><br /><br />
 <h4 id="packageText"></h4>
 <div id="packageDetails">
