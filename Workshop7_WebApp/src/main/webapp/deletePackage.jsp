@@ -122,6 +122,18 @@ This is the class to delete packages
                 console.log("Error: " + e);
             }
         }
+        // function asks for confirmation to delete, displays confirmation message and reloads the page
+        function confirmDelete() {
+            var r = confirm("Are you sure you want to delete this package?");
+            if (r == true) {
+            //User Pressed okay. Delete
+                deletePackage()
+                alert("Package Deleted")
+                window.location.reload();
+            } else {
+            //user pressed cancel. Do nothing
+            }
+        }
 
     </script>
 </head>
@@ -141,7 +153,7 @@ This is the class to delete packages
     <p id="PkgDesc"></p>
     <p id="PkgBasePrice"></p>
     <p id="PkgAgencyCommission"></p>
-        <button type="button" onclick="deletePackage()">Delete</button>
+        <button type="button" onclick="confirmDelete()">Delete</button>
 </div><br /><br />
 <h4 id="productsText"></h4>
 <%--table to display products--%>
