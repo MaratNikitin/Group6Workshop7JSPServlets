@@ -124,13 +124,13 @@ public class TravelExpertsResource {
         { // updating or inserting a Package in the DB was successful
             em.getTransaction().commit(); // transaction is committed - changes are saved in the DB
             em.close(); // mission accomplished - connection closed
-            response = "{'message', 'Package was updated or inserted successfully'}"; // positive feedback message is saved
+            response = "{\"message\", \"Package was updated or inserted successfully\"}"; // positive feedback message is saved
         }
         else
         { // updating a Package in the DB failed
             em.getTransaction().rollback(); // transaction rollback - no need to save faulty changes
             em.close(); // connection is closed even though the insert/update failed
-            response = "{'message', 'Failed to update or insert a package'}"; // preparing bad news message
+            response = "{\"message\", \"Failed to update or insert a package\"}"; // preparing bad news message
         }
         return response; // message for a user about the update/insert status is returned
     }
@@ -153,13 +153,13 @@ public class TravelExpertsResource {
         { // inserting an Agent in the DB was successful
             em.getTransaction().commit(); // transaction is committed - changes are saved in the DB
             em.close(); // mission accomplished - connection closed
-            response = "{'message', 'Package was inserted successfully'}"; // positive feedback message is saved
+            response = "{\"message\", \"Package was inserted successfully\"}"; // positive feedback message is saved
         }
         else
         { // inserting an Package in the DB failed
             em.getTransaction().rollback(); // transaction rollback - no need to save faulty changes
             em.close(); // connection is closed even though the insert failed
-            response = "{'message', 'Failed to insert a package'}"; // preparing bad news message
+            response = "{\"message\", \"Failed to insert a package\"}"; // preparing bad news message
         }
         return response; // message for a user about the insert status is returned
     }
@@ -181,13 +181,13 @@ public class TravelExpertsResource {
         { // delete attempts was successful
             em.getTransaction().commit(); // saving changes in the DB
             em.close(); // mission accomplished - connection closed
-            response = "{'message', 'Package was deleted successfully'}"; // preparing good news message
+            response = "{\"message\", \"Package was deleted successfully\"}"; // preparing good news message
         }
         else
         {
             em.getTransaction().rollback(); // transaction rollback - no need to save faulty changes
             em.close(); // connection is closed even though the delete failed
-            response = "{'message', 'Failed to delete package'}"; // preparing bad news message
+            response = "{\"message\", \"Failed to delete package\"}"; // preparing bad news message
         }
         return response; // message for a user about the insert status is returned
     }
@@ -210,13 +210,13 @@ public class TravelExpertsResource {
         { // delete attempts was successful
             em.getTransaction().commit(); // saving changes in the DB
             em.close(); // mission accomplished - connection closed
-            response = "{'message', 'Package was deleted successfully'}"; // preparing good news message
+            response = "{\"message\", \"Package was deleted successfully\"}"; // preparing good news message
         }
         else
         {
             em.getTransaction().rollback(); // transaction rollback - no need to save faulty changes
             em.close(); // connection is closed even though the delete failed
-            response = "{'message', 'Failed to delete package'}"; // preparing bad news message
+            response = "{\"message\", \"Failed to delete package\"}"; // preparing bad news message
         }
         return response; // message for a user about the insert status is returned
     }
@@ -277,13 +277,13 @@ public class TravelExpertsResource {
         { // updating or inserting an Agent in the DB was successful
             em.getTransaction().commit(); // transaction is committed - changes are saved in the DB
             em.close(); // mission accomplished - connection closed
-            response = "{'message', 'Agent was updated or inserted successfully'}"; // positive feedback message is saved
+            response = "{\"message\", \"Agent was updated or inserted successfully\"}"; // positive feedback message is saved
         }
         else
         { // updating an Agent in the DB failed
             em.getTransaction().rollback(); // transaction rollback - no need to save faulty changes
             em.close(); // connection is closed even though the update failed
-            response = "{'message', 'Failed to update or insert an agent'}"; // preparing bad news message
+            response = "{\"message\", \"Failed to update or insert an agent\"}"; // preparing bad news message
         }
         return response; // message for a user about the update/insert status is returned
     }
@@ -306,13 +306,13 @@ public class TravelExpertsResource {
         { // inserting an Agent in the DB was successful
             em.getTransaction().commit(); // transaction is committed - changes are saved in the DB
             em.close(); // mission accomplished - connection closed
-            response = "{'message', 'Agent was inserted successfully'}"; // positive feedback message is saved
+            response = "{\"message\", \"Agent was inserted successfully\"}"; // positive feedback message is saved
         }
         else
         { // inserting an Agent in the DB failed
             em.getTransaction().rollback(); // transaction rollback - no need to save faulty changes
             em.close(); // connection is closed even though the insert failed
-            response = "{'message', 'Failed to insert agent'}"; // preparing bad news message
+            response = "{\"message\", \"Failed to insert agent\"}"; // preparing bad news message
         }
         return response; // message for a user about the insert status is returned
     }
@@ -334,13 +334,13 @@ public class TravelExpertsResource {
         { // delete attempts was successful
             em.getTransaction().commit(); // saving changes in the DB
             em.close(); // mission accomplished - connection closed
-            response = "{'message', 'Agent was deleted successfully'}"; // preparing good news message
+            response = "{\"message\", \"Agent was deleted successfully\"}"; // preparing good news message
         }
         else
         {
             em.getTransaction().rollback(); // transaction rollback - no need to save faulty changes
             em.close(); // connection is closed even though the delete failed
-            response = "{'message', 'Failed to delete agent'}"; // preparing bad news message
+            response = "{\"message\", \"Failed to delete agent\"}"; // preparing bad news message
         }
         return response; // message for a user about the insert status is returned
     }
