@@ -115,7 +115,7 @@
                 $("#lblPkgBasePrice").hide();
             }
 
-            if(baseprice <= commission || baseprice.length == 0)
+            if(baseprice <= commission || commission.length == 0)
             {
                 $("#lblPkgAgencyCommission").show();
             }
@@ -126,12 +126,12 @@
 
 
             //this function is to set the textfields is validated true or false
-            var isPkgName = $("#PkgName").val().length > 50 ? false : true;
-            var isPkgStartDate = startdate > enddate ? false : true;
-            var isPkgEndDate = startdate > enddate ? false : true;
-            var isPkgDesc = $("#PkgDesc").val().length > 50 ? false : true;
-            var isPkgBasePrice = baseprice <= commission ? false : true;
-            var isPkgAgencyCommission = baseprice <= commission ? false : true;
+            var isPkgName = $("#PkgName").val().length > 50 || $("#PkgName").val().length == 0 ? false : true;
+            var isPkgStartDate = startdate > enddate || startdate < Date.now() || $("#PkgStartDate").val() == "" ? false : true;
+            var isPkgEndDate = startdate > enddate || enddate < Date.now() || $("#PkgEndDate").val() == "" ? false : true;
+            var isPkgDesc = $("#PkgDesc").val().length > 50 || $("#PkgDesc").val().length == 0 ? false : true;
+            var isPkgBasePrice = baseprice <= commission || baseprice.length == 0 ? false : true;
+            var isPkgAgencyCommission = baseprice <= commission || commission.length == 0 ? false : true;
 
             //check if all textfields is validated, if false the alert message will show
             if(isPkgName == false
