@@ -114,8 +114,8 @@ public class MainActivity extends AppCompatActivity {
             StringBuffer buffer = new StringBuffer();
 
             // comment-out the line(s) with not your IP(s) and insert a line with your IP instead:
-            //String url = "http://192.168.1.68:8080/api/packages"; // Marat's IP is in the URL
-            String url = "http://192.168.1.83:8080/api/packages"; // Becca's IP is in the URL
+            String url = "http://192.168.1.68:8080/api/packages"; // Marat's IP is in the URL
+            //String url = "http://192.168.1.83:8080/api/packages"; // Becca's IP is in the URL
 
             StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
                 @Override

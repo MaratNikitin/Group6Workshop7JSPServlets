@@ -149,7 +149,7 @@
             {
                 //create json object for package details
                 const putData = {
-                    "packageId":0,
+                    "packageId":$("#PackageId").val(),
                     "pkgName":$("#PkgName").val(),
                     "pkgStartDate":startdate,
                     "pkgEndDate":enddate,
