@@ -137,7 +137,8 @@ This is the class to delete packages
 
     </script>
 </head>
-<body>
+<body  id="bckgrnd">
+<div id="getPckgForm">
 <h1>Select a package to delete:</h1>
 <%--package selection option, Initiates fetchPackage and fetchProducts when selection is made--%>
 <select id="packageselect" onchange="fetchPackage(this.value), fetchProducts(this.value)">
