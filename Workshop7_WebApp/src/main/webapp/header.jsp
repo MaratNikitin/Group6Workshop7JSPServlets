@@ -17,7 +17,7 @@
     <link href="stylesheet.css" rel="stylesheet" />
     <nav class="navbar navbar-light bg-light static-top">
         <div class="container">
-            <a class="navbar-brand" href="index.jsp">Travel Experts</a>
+            <a class="navbar-brand" href="index.jsp">Back to Travel Experts Home</a>
             <a class="btn btn-primary" href="getPackage.jsp">View</a>
             <a class="btn btn-primary" href="createPackage.jsp">Create</a>
             <a class="btn btn-primary" href="updatePackage.jsp">Update</a>

@@ -153,7 +153,7 @@ This is the class to delete packages
     <p id="PkgDesc"></p>
     <p id="PkgBasePrice"></p>
     <p id="PkgAgencyCommission"></p>
-        <button type="button" onclick="confirmDelete()">Delete</button>
+        <button class="btn-light" type="button" onclick="confirmDelete()">Delete</button>
 </div><br /><br />
 <h4 id="productsText"></h4>
 <%--table to display products--%>
@@ -169,6 +169,7 @@ This is the class to delete packages
         fetchPackages();
     });
 </script>
+</div>
 </body>
 <%--adds view for footer--%>
 <footer>
