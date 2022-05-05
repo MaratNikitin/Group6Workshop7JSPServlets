@@ -137,7 +137,8 @@ This is the class to delete packages
 
     </script>
 </head>
-<body>
+<body  id="bckgrnd">
+<div id="getPckgForm">
 <h1>Select a package to delete:</h1>
 <%--package selection option, Initiates fetchPackage and fetchProducts when selection is made--%>
 <select id="packageselect" onchange="fetchPackage(this.value), fetchProducts(this.value)">
@@ -153,7 +154,7 @@ This is the class to delete packages
     <p id="PkgDesc"></p>
     <p id="PkgBasePrice"></p>
     <p id="PkgAgencyCommission"></p>
-        <button type="button" onclick="confirmDelete()">Delete</button>
+        <button class="btn-light" type="button" onclick="confirmDelete()">Delete</button>
 </div><br /><br />
 <h4 id="productsText"></h4>
 <%--table to display products--%>
@@ -169,6 +170,7 @@ This is the class to delete packages
         fetchPackages();
     });
 </script>
+</div>
 </body>
 <%--adds view for footer--%>
 <footer>

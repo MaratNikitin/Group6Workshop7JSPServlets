@@ -7,6 +7,10 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<%--adds view for header--%>
+<header>
+    <jsp:include page="header.jsp" />
+</header>
 <head>
     <title>Update Package</title>
     <script   src="https://code.jquery.com/jquery-3.6.0.js"   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="   crossorigin="anonymous"></script>
@@ -232,4 +236,7 @@
     });
 </script>
 </body>
+<footer>
+    <jsp:include page="footer.jsp" />
+</footer>
 </html>
