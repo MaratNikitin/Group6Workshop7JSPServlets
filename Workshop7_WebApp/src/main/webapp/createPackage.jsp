@@ -7,7 +7,13 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<header>
+    <jsp:include page="header.jsp" />
+    <link href="stylesheet.css" rel="stylesheet" />
+</header>
 <head>
+    <link href="stylesheet.css" rel="stylesheet" />
+
     <title>Add Package</title>
     <script   src="https://code.jquery.com/jquery-3.6.0.js"   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="   crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.1/dayjs.min.js"></script>
@@ -90,11 +96,11 @@
             console.log(isPkgEndDate);
             //check if all textfields is validated, if false the alert message will show
             if(isPkgName == false
-            || isPkgStartDate == false
-            || isPkgEndDate == false
-            || isPkgDesc == false
-            || isPkgBasePrice == false
-            || isPkgAgencyCommission == false
+                || isPkgStartDate == false
+                || isPkgEndDate == false
+                || isPkgDesc == false
+                || isPkgBasePrice == false
+                || isPkgAgencyCommission == false
             )
             {
                 //this is the alert message if validated false
@@ -149,25 +155,34 @@
 
         }
     </script>
+
 </head>
-<%--adds view for header--%>
-<header>
-    <jsp:include page="header.jsp" />
-</header>
-<body>
-<h1><%= "Travel Experts" %>
+<body id="bckgrnd" >
+<div id="pckgForm">
+<h1><%= "Create your Package" %>
 </h1>
 <%--form for the package details fields--%>
 <form>
-    Id:<input id="PackageId" type="number" disabled="disabled" /><br />
-    Package Name:<input id="PkgName" type="text" /><label id="lblPkgName" style="color: red;padding-left: 10px;">0 or >50 characters is not allowed.</label><br />
-    Start Date:<input id="PkgStartDate" type="date" /><label id="lblPkgStartDate" style="color: red;padding-left: 10px;">The start date is required & must be less than end date.</label><br />
-    End Date:<input id="PkgEndDate" type="date" /><label id="lblPkgEndDate" style="color: red;padding-left: 10px;">The end date is required & must be greater than start date.</label><br />
-    Description:<input id="PkgDesc" type="text" /><label id="lblPkgDesc" style="color: red;padding-left: 10px;">0 or >50 characters is not allowed.</label><br />
-    Base Price:<input id="PkgBasePrice" type="number" step=".01" /><label id="lblPkgBasePrice" style="color: red;padding-left: 10px;">Enter positive number value and base price must be greater than commission.</label><br />
-    Commission:<input id="PkgAgencyCommission" type="number" step=".01" /><label id="lblPkgAgencyCommission" style="color: red;padding-left: 10px;">Enter positive number value and commission must be less than base price.</label><br />
-    <button type="button" onclick="putPackage()">Insert</button>
+
+        <label for="PackageId" class="form-label">Package Id:</label>
+            <input id="PackageId" type="number" disabled="disabled" class="form-control"/><br />
+        <label for="PkgName" class="form-label">Package Name:</label>
+            <input id="PkgName" type="text" class="form-control"/><label id="lblPkgName" style="color: red;padding-left: 10px;">0 or >50 characters is not allowed.</label><br />
+        <label for="PkgStartDate" class="form-label">Start Date:</label>
+            <input id="PkgStartDate" type="date" class="form-control"/>
+        <label id="lblPkgStartDate" style="color: red;padding-left: 10px;">The start date is required & must be less than end date.</label><br />
+        <label for="PkgEndDate" class="form-label">End Date:</label>
+            <input id="PkgEndDate" type="date" class="form-control"/><label id="lblPkgEndDate" style="color: red;padding-left: 10px;">The end date is required & must be greater than start date.</label><br />
+        <label for="PkgDesc" class="form-label">Description:</label>
+            <input id="PkgDesc" type="text" class="form-control"/><label id="lblPkgDesc" style="color: red;padding-left: 10px;">0 or >50 characters is not allowed.</label><br />
+        <label for="PkgBasePrice" class="form-label">Base Price:</label>
+            <input id="PkgBasePrice" type="number" step=".01" class="form-control"/><label id="lblPkgBasePrice" style="color: red;padding-left: 10px;">Enter positive number value and base price must be greater than commission.</label><br />
+        <label for="PkgAgencyCommission" class="form-label">Commission:</label>
+            <input id="PkgAgencyCommission" type="number" step=".01" class="form-control"/><label id="lblPkgAgencyCommission" style="color: red;padding-left: 10px;">Enter positive number value and commission must be less than base price.</label><br />
+    <button class="btn-light" type="button" onclick="putPackage()">Create</button>
+
 </form>
+</div>
 <script>
     //when the document loads the alert labels is hide
     $(document).ready(function(){
@@ -180,4 +195,7 @@
     });
 </script>
 </body>
+<footer>
+    <jsp:include page="footer.jsp" />
+</footer>
 </html>
