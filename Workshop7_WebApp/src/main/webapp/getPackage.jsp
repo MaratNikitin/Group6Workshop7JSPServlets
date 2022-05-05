@@ -12,18 +12,17 @@ This is the class to get packages to view
 <%--adds view for header--%>
 <header>
     <jsp:include page="header.jsp" />
-    <link href="stylesheet.css" rel="stylesheet" />
 </header>
 <head>
     <meta charset="UTF-8">
     <title>Package display</title>
-<%--    <!-- Favicon-->
+    <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->--%>
+    <!-- Core theme CSS (includes Bootstrap)-->
     <link href="stylesheet.css" rel="stylesheet" />
     <script   src="https://code.jquery.com/jquery-3.6.0.js"   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="   crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.1/dayjs.min.js"></script>
@@ -111,9 +110,7 @@ This is the class to get packages to view
 
     </script>
 </head>
-<body id="bckgrnd" >
-<link href="stylesheet.css" rel="stylesheet" />
-<div id="getPckgForm">
+<body>
 <h1>Select your package:</h1>
 <%--package selection option, Initiates fetchPackage and fetchProducts when selection is made--%>
 <select id="packageselect" onchange="fetchPackage(this.value), fetchProducts(this.value)">
@@ -138,14 +135,12 @@ This is the class to get packages to view
     <tbody>
     </tbody>
 </table>
-
 <script>
     //when the document loads the fetchPackages function is used
     $(document).ready(function(){
         fetchPackages();
     });
 </script>
-</div>
 </body>
 <%--adds view for footer--%>
 <footer>
